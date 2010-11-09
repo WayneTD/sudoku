@@ -1,5 +1,6 @@
 require 'test/unit'
-require './cell.rb'
+on_windows = ENV['windir'] != nil
+require on_windows ? '.\cell.rb' : './cell.rb'
 
 class CellTests < Test::Unit::TestCase
   def test_new_cell_should_contain_correct_values

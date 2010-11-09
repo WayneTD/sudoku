@@ -1,4 +1,5 @@
-require './cell.rb'
+on_windows = ENV['windir'] != nil
+require on_windows ? '.\cell.rb' : './cell.rb'
 
 class Grid
   EMPTY_GRID = '0' * 81

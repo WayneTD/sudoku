@@ -1,5 +1,6 @@
 require 'test/unit'
-require './grid.rb'  
+on_windows = ENV['windir'] != nil
+require on_windows ? '.\grid.rb' : './grid.rb'  
   
 class GridTests < Test::Unit::TestCase
   EMPTY_SUDOKU = 
